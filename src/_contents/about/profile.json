@@ -1,0 +1,78 @@
+[
+  {
+    "id": 0,
+    "title": "Experience",
+    "type": "title-time-desc",
+    "content": [
+      {
+        "title": "Microsoft",
+        "time": "April 2024 - Present",
+        "desc": "Software Engineer Intern"
+      },
+      {
+        "title": "Microsoft",
+        "time": "July 2022 - Oct 2022",
+        "desc": "Support Engineer Intern"
+      },
+      {
+        "title": "Brown University Library",
+        "time": "Sept 2023 - April 2024",
+        "desc": "Software Engineer Intern"
+      },
+      {
+        "title": "China Unicom",
+        "time": "June 2021 - Aug 2021",
+        "desc": "Software Engineer Intern"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Education",
+    "type": "title-time-desc",
+    "content": [
+      {
+        "title": "Brown University",
+        "time": "2023 - 2025",
+        "desc": "Sc.M. in Computer Science"
+      },
+      {
+        "title": "Duke University / Duke Kunshan University",
+        "time": "2019 - 2023",
+        "desc": "B.S. in Data Science\nB.S. in Interdisciplinary Studies"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Tools & Technologies",
+    "type": "list",
+    "content": [
+      "Javascript, Typescript",
+      "HTML, CSS, SASS",
+      "React.ts, Next.js, Vue.js",
+      "C++, Python, Java, Go, PHP",
+      "pandas, numpy, matplotlib",
+      "SQL, MongoDB, Redis",
+      "Docker, Kubernetes, ArgoCD",
+      "Hadoop, Spark, Kafka",
+      "Git, Linux, Bash, Nginx",
+      "LaTeX, Markdown, Jupyter",
+      "IoT, Raspberry Pi, Arduino"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Skills",
+    "type": "list",
+    "content": [
+      "Full-stack Web Development",
+      "LLM & RAG system design",
+      "Prompt Engineering",
+      "Data Analysis & Visualization",
+      "Machine Learning & AI",
+      "DevOps & Cloud Computing",
+      "Creative Coding"
+    ]
+  }
+]
