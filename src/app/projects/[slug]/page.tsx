@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { notFound } from "next/navigation";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const Content = await getMdxContent(params.slug);
@@ -7,13 +8,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
 }
 
 async function getMdxContent(slug: string) {
-  return dynamic(() => {
-      return import(`@/_contents/projects/${slug}.mdx`);
-    // TODO: some try-catch logic
-    // try {
-    //   return import(`@/_contents/projects/${slug}.mdx`);
-    // } catch (error) {
-    //   return <div>Error</div>;
-    // }
+  return dynamic(async () => {
+    try {
+      return await import(`@/_contents/projects/${slug}.mdx`);
+    } catch (error) {
+      notFound();
+    }
   });
 }
