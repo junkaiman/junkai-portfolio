@@ -1,7 +1,9 @@
+import SelfIntro from "@/_contents/about/self-intro.mdx";
+
 export default function AboutMe() {
   return (
     <div>
-      <div>self introduction on the left</div>
+      <SelfIntro />
       <div>personal pic on the right</div>
     </div>
   );
