@@ -1,7 +1,7 @@
 "use client";
 import profileData from "@/_contents/about/profile.json";
 
-function TitleTimeDescBlock({
+function TitleTimeDescSubBlock({
   title,
   time,
   desc,
@@ -19,13 +19,13 @@ function TitleTimeDescBlock({
   );
 }
 
-function ListBlock({ title, items }: { title: string; items: string[] }) {
+function ListBlock({ title, content }: { title: string; content: string[] }) {
   return (
     <div>
       <div>{title}</div>
       <ul>
-        {items.map((item) => (
-          <li key={item}>{item}</li>
+        {content.map((c) => (
+          <li key={c}>{c}</li>
         ))}
       </ul>
     </div>
@@ -38,33 +38,43 @@ interface ITitleTimeDesc {
   desc: string;
 }
 
-function ProfileDetailsColumn() {
-  profileData.map((p) => {
-    switch (p.type) {
-      case "title-time-desc":
-        return (
-          <div>
-            <div>{p.title}</div>
-            {/* {p.content.map((c: ITitleTimeDesc) => (
-              <TitleTimeDescBlock
-                key={c.title}
-                title={c.title}
-                time={c.time}
-                desc={c.desc}
-              />
-            ))} */}
-          </div>
-        );
-      case "list":
-      // return (
+interface IList {
+  title: string;
+  content: string[];
+}
 
-      // )
-      default:
-        break;
-    }
-  });
+function ProfileDetailsColumn(p: {
+  id: number;
+  type: string;
+  title: string;
+  content: any[];
+}) {
+  switch (p.type) {
+    case "title-time-desc":
+      return (
+        <div>
+          <div>{p.title}</div>
+          {p.content.map((c, idx) => (
+            <TitleTimeDescSubBlock
+              key={idx}
+              {...(c as unknown as ITitleTimeDesc)}
+            />
+          ))}
+        </div>
+      );
+    case "list":
+      return <ListBlock {...(p as unknown as IList)} />;
+    default:
+      return <></>;
+  }
 }
 
 export default function ProfileDetails() {
-  return <div>{/* <ProfileDetailsColumn /> */}</div>;
+  return (
+    <div>
+      {profileData.map((p) => {
+        return <ProfileDetailsColumn key={p.id} {...p} />;
+      })}
+    </div>
+  );
 }
