@@ -1,12 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ProjectOverviews from "@/components/ProjectOverviews";
 
 export default function ProjectPage() {
   return (
     <>
       <Header />
-      <h1>Project page</h1>
+      <ProjectOverviews />
       <Footer />
     </>
-  )
+  );
 }

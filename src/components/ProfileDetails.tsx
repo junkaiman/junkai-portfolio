@@ -1,5 +1,6 @@
 "use client";
 import profileData from "@/_contents/about/profile.json";
+import style from "./ProfileDetails.module.css";
 
 function TitleTimeDescSubBlock({
   title,
@@ -11,19 +12,19 @@ function TitleTimeDescSubBlock({
   desc: string;
 }) {
   return (
-    <div>
-      <div>{title}</div>
-      <div>{time}</div>
-      <div>{desc}</div>
+    <div className={style.experienceContainer}>
+      <div className={style.experienceTitle}>{title}</div>
+      <div className={style.experienceTime}>{time}</div>
+      <div className={style.experienceDesc}>{desc}</div>
     </div>
   );
 }
 
 function ListBlock({ title, content }: { title: string; content: string[] }) {
   return (
-    <div>
-      <div>{title}</div>
-      <ul>
+    <div className={style.columnContainer}>
+      <div className={style.columnTitle}>{title}</div>
+      <ul className={style.columnList}>
         {content.map((c) => (
           <li key={c}>{c}</li>
         ))}
@@ -52,8 +53,8 @@ function ProfileDetailsColumn(p: {
   switch (p.type) {
     case "title-time-desc":
       return (
-        <div>
-          <div>{p.title}</div>
+        <div className={style.columnContainer}>
+          <div className={style.columnTitle}>{p.title}</div>
           {p.content.map((c, idx) => (
             <TitleTimeDescSubBlock
               key={idx}
@@ -71,7 +72,12 @@ function ProfileDetailsColumn(p: {
 
 export default function ProfileDetails() {
   return (
-    <div>
+    <div
+      className={
+        style.profileColumns +
+        " grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      }
+    >
       {profileData.map((p) => {
         return <ProfileDetailsColumn key={p.id} {...p} />;
       })}

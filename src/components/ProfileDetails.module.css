@@ -1,0 +1,33 @@
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+
+  .experienceTime {
+    color: var(--font-color-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--font-letter-spacing);
+    font-size: 0.8rem;
+  }
+
+  .experienceDesc {
+    color: var(--font-color-secondary);
+  }
+}
+
+.columnContainer {
+  margin: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--font-color-secondary);
+
+  .columnTitle {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+  }
+
+  .columnList {
+    line-height: 2rem;
+  }
+}

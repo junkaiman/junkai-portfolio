@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
+import { DM_Serif_Display } from "next/font/google";
 import basic from "@/_contents/basic.json";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: basic.name + " - " + basic.desc,
@@ -17,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${dmSans.variable} ${dmSerifDisplay.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
