@@ -2,7 +2,7 @@ import basic from "@/_contents/basic.json";
 
 export default function Footer() {
   return (
-    <footer className="p-4 bg-gray-800 text-white">
+    <footer className="py-8 px-7 text-xs">
       <p>&copy; {basic.startYear} - {new Date().getFullYear()} {basic.name}</p>
     </footer>
   );
