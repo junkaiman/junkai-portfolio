@@ -72,12 +72,7 @@ function ProfileDetailsColumn(p: {
 
 export default function ProfileDetails() {
   return (
-    <div
-      className={
-        style.profileColumns +
-        " grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-      }
-    >
+    <div className={"grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5"}>
       {profileData.map((p) => {
         return <ProfileDetailsColumn key={p.id} {...p} />;
       })}

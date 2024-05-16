@@ -4,10 +4,10 @@ import basic from "@/_contents/basic.json";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between p-4 bg-gray-800 text-white">
-      <Link href="/">
-        <Image src={basic.siteIcon} alt="logo" width={50} height={50} />
-        <h1 className="text-2xl font-bold">{basic.name}</h1>
+    <header className="flex items-center justify-between p-4">
+      <Link href="/" className="items-center">
+        <Image src={basic.siteIcon} alt="logo" width={45} height={45} />
+        {/* <h1 className="text-2xl font-bold">{basic.name}</h1> */}
       </Link>
       <nav>
         <ul className="flex space-x-4">
