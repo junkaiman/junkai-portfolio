@@ -1,12 +1,21 @@
 import SelfIntro from "@/_contents/about/self-intro.mdx";
-
+import basic from "@/_contents/basic.json";
+import Image from "next/image";
 export default function AboutMe() {
   return (
-    <div className="p-5 flex flex-row">
-      <div className="px-4 text-xl space-y-4">
+    <div className="p-5 flex flex-row space-x-20">
+      <div className="text-xl space-y-4">
         <SelfIntro />
       </div>
-      <div>personal pic on the right</div>
+      <div className="ml-auto">
+        <Image
+          src={basic.profilePhoto}
+          alt="profile photo"
+          width={900}
+          height={900}
+        />
+        personal pic on the right
+      </div>
     </div>
   );
 }

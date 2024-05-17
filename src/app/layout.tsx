@@ -25,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${dmSerifDisplay.variable}`}>
+      <body
+        className={`container mx-auto p-3 ${dmSans.variable} ${dmSerifDisplay.variable}`}
+      >
         {children}
       </body>
     </html>

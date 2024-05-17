@@ -5,9 +5,9 @@ import style from "./Header.module.css";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between p-4">
+    <header className={style.header + " flex items-center justify-between p-2 sticky top-0"}>
       <Link href="/" className="items-center">
-        <Image src={basic.siteIcon} alt="logo" width={45} height={45} />
+        <Image src={basic.siteIcon} alt="logo" width={40} height={40} />
       </Link>
       <nav>
         {/* TODO: Highlight current page */}

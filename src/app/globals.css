@@ -14,6 +14,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  /* text-wrap: balance; */
 }
 
 /* @media (prefers-color-scheme: dark) {

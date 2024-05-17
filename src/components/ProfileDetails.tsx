@@ -72,7 +72,7 @@ function ProfileDetailsColumn(p: {
 
 export default function ProfileDetails() {
   return (
-    <div className={"grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-5"}>
+    <div className={"grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"}>
       {profileData.map((p) => {
         return <ProfileDetailsColumn key={p.id} {...p} />;
       })}

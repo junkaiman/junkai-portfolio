@@ -11,3 +11,8 @@
 .navContainer a:hover {
   text-decoration-color: var(--font-color-primary);
 }
+
+.header {
+  background: var(--background-color);
+  border-bottom: 1px solid #ffffff24;
+}
