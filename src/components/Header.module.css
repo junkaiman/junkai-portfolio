@@ -1,0 +1,13 @@
+.navContainer li:before {
+  content: unset;
+}
+
+.navContainer a {
+  color: var(--font-color-secondary);
+  transition: text-decoration-color 300ms;
+  font-weight: 500;
+}
+
+.navContainer a:hover {
+  text-decoration-color: var(--font-color-primary);
+}
