@@ -1,21 +1,31 @@
 "use client";
 import profileData from "@/_contents/about/profile.json";
 import style from "./ProfileDetails.module.css";
+import Link from "next/link";
 
 function TitleTimeDescSubBlock({
   title,
   time,
   desc,
+  desc2,
+  desc2Url,
 }: {
   title: string;
   time: string;
   desc: string;
+  desc2: string;
+  desc2Url: string;
 }) {
   return (
     <div className={style.experienceContainer}>
       <div className={style.experienceTitle}>{title}</div>
       <div className={style.experienceTime}>{time}</div>
       <div className={style.experienceDesc}>{desc}</div>
+      {desc2 && desc2Url && (
+        <Link href={desc2Url} target="_blank">
+          <div className={style.experienceDesc2}>{desc2}</div>
+        </Link>
+      )}
     </div>
   );
 }
@@ -37,6 +47,8 @@ interface ITitleTimeDesc {
   title: string;
   time: string;
   desc: string;
+  desc2: string;
+  desc2Url: string;
 }
 
 interface IList {

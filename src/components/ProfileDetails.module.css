@@ -10,8 +10,15 @@
     font-size: 0.8rem;
   }
 
-  .experienceDesc {
+  .experienceDesc,
+  .experienceDesc2 {
     color: var(--font-color-secondary);
+  }
+
+  .experienceDesc2 {
+    color: var(--font-color-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
   }
 }
 

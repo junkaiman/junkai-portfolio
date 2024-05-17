@@ -7,17 +7,23 @@
       {
         "title": "Microsoft",
         "time": "April 2024 - Present",
-        "desc": "Software Engineer Intern"
+        "desc": "Software Engineer Intern",
+        "desc2": "-> Forms Copilot",
+        "desc2Url": "https://support.microsoft.com/en-us/office/welcome-to-copilot-in-forms-6a21bfbd-21b3-4e48-946c-7603b129521c"
       },
       {
         "title": "Microsoft",
         "time": "July 2022 - Oct 2022",
-        "desc": "Support Engineer Intern"
+        "desc": "Support Engineer Intern",
+        "desc2": "-> Azure Monitor",
+        "desc2Url": "https://azure.microsoft.com/en-us/products/monitor"
       },
       {
         "title": "Brown University Library",
         "time": "Sept 2023 - April 2024",
-        "desc": "Software Engineer Intern"
+        "desc": "Software Engineer Intern",
+        "desc2": "-> BruKnow Search",
+        "desc2Url": "https://library.brown.edu/"
       },
       {
         "title": "China Unicom",
