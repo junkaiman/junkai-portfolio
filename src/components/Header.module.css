@@ -15,4 +15,5 @@
 .header {
   background: var(--background-color);
   border-bottom: 1px solid #ffffff24;
+  z-index: 9999;
 }

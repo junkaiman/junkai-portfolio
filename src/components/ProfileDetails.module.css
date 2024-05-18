@@ -36,5 +36,6 @@
 
   .columnList {
     line-height: 2rem;
+    color: var(--font-color-secondary);
   }
 }
