@@ -46,14 +46,10 @@ timelineData.sort((a, b) => {
 export default function Timeline() {
   return (
     <div className="max-w-lg p-5">
+      <div className={style.columnTitle}>Timeline</div>
       <ol className="relative border-s border-gray-200">
         {timelineData.map((t, idx) => (
-          <li
-            className={
-              style.timelineItem + " mb-6 ms-4"
-            }
-            key={idx}
-          >
+          <li className={style.timelineItem + " mb-6 ms-4"} key={idx}>
             <div className="absolute w-3 h-3 bg-white rounded-full mt-1.5 ms-0.5 -start-6 border border-white"></div>
             <time className="mb-1 text-sm font-normal leading-none">
               {t.monthStr} {t.year}
