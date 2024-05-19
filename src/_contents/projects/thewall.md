@@ -1,0 +1,73 @@
+---
+date: 2020-05-14
+published: true
+title: "Thewall"
+description: "Online Anonymous Message Board"
+category: product
+disciplines: Full-Stack, UI/UX, App Design, WeChat-MiniProgram
+media: 
+ownership: Personal
+client:
+time_period: 2020-2022
+thumbnail: "/projects/thewall/thewall.png"
+intro: |
+  [thewall](http://thewall.gallinula.com){:target="_blank"} is an online message board for DKU members to anonymously publish their messages & appeals. The service was up since February 2021 as an anonymous branch of Gallinula forum, and now became the most popular Web App at Duke Kunshan University.
+  
+  
+  Quick Facts: thewall has been up for **<span style="font-size:1.5rem; color:#9bfd50" id="show"></span>** seconds. Until 2022/08/18, more than *40%* of DKU students have used this service and *80.5%* of the user will return to the service the next day. The service has received *8.7k* messages in total with a daily PV of *2k~3k*.
+  
+  <script type="text/javascript">
+    var show = document.getElementById("show");
+    setInterval(function() {showTime(); }, 1000);
+    function showTime() {
+      var time = new Date().getTime() / 1000 - 1614495194;
+      show.innerHTML = Math.round(time);
+    }
+  </script>
+
+
+  [[GitHub]](https://github.com/junkaiman/thewall_frontend) [[Changelog]](/projects/thewall-changelog)
+
+  [[Demo Video]](https://youtu.be/6hJkCm7iWx4)
+
+content_layout:
+  - section_layout: 7col-5col
+    images:
+      - url: '/projects/thewall/thewall.png'
+        caption: thewall running on iOS
+      - url: '/projects/gallinula/thewall.jpeg'
+        caption: screenshot of thewall
+
+  - section_layout: text
+    content: |
+      ## Product Features
+      1. Emoji style with card design
+      2. Live chat in real-time enabled
+      3. Reply to a quoted message
+      3. All users has the equal permission to "veto-off" any inappropriate message on the board. And the deleted messages will be kept in the trash bin for 24 hours.
+
+  - section_layout: text
+    content: |
+      ## Technical Architecture
+      Node.js serving as backend system, and Vue.js as front-end system. Live message notification service is available (powered by [Bark](https://github.com/Finb/Bark)) running on the server end.
+
+  - section_layout: 1col
+    images:
+      - url: '/projects/thewall/tech-structure.png'
+        caption: technical architecture of thewall
+
+  - section_layout: text
+    content: |
+      ## UI/UX Design
+      [css parameters]
+
+
+  - section_layout: text
+    content: | 
+      Future updates:
+      - Migrate the database to online PaaS services
+      - Adopt global CDN service for faster response speed
+      - Use websocket to sync messages
+      - Live drawing board
+
+---

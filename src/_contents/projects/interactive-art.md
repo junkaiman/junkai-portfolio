@@ -1,0 +1,83 @@
+---
+date: 2022-02-14
+published: true
+title: "Interactive Digital Artwork"
+description: "Interactive M&A Work"
+category: research
+disciplines: Media Arts, Computer Graphics
+media: 
+ownership: Personal
+client:
+time_period: 2020-2022
+thumbnail: "/projects/interactive_art/album.png"
+
+intro: |
+  Projects for MEDIART206 - Computer Graphics (Instr: [Benjamin Bacon](https://www.benjaminbacon.studio/)). Interactive Digital Artwork.
+
+content_layout:
+  - section_layout: 2col
+    images:
+      - url: "/projects/interactive_art/gaze.jpeg"
+        caption: Gaze
+      - url: "/projects/interactive_art/circle_of_life.jpeg"
+        caption: Circle of Life
+
+  - section_layout: text
+    content: | 
+      # Gaze
+      [[GitHub]](https://github.com/junkaiman/Computer-Graphics-Projects/tree/main/Final%20Project) [[Demo]](https://youtu.be/MzhG0GVUouE)
+      ## Project Proposal
+      It’s a common scene that audiences at art gallery will usually gaze at artwork for a long time to observe the details and feel the in-depth meanings behind the works. This “gazing” and long-time observation is necessary if we want to truly understand an artwork and feel the same as the authors. So I intend to design a device that detects and analyzes whether there is an audience looking at the screen, how many audiences are looking at the screen, and whether audiences are focusing on the screen. If there’s no one looking at the screen, the graphic will be black. If an audience stops his/her foot and starts looking at the screen, the content will gradually show up. The algorithm will analyze the expression on the audience’s face and determine whether he/she is “gazing” and ruminating. If the audience is paying attention to this artwork, the graphic on the screen will become clearer and more variations will appear. Besides, the algorithm will analyze how many faces are appeared in front of the screen. The more audiences appear at the same time, the more exaggerated the graphic and more variations there will be.
+  - section_layout: 2col
+    images: 
+      - url: '/projects/interactive_art/gaze_pic1.jpeg'
+        caption: "Copyright: © Mark Blower 2019"
+      - url: '/projects/interactive_art/gaze_usertest.png'
+        caption: "User Test of Gaze"
+
+  - section_layout: text
+    content: |
+      I got inspired by a short story that happened to me last month. Last month during the 2020 Fall DKU Innovation Summit, by chance I had lunch with the artist Qian Zhou who is the donor of the painting “The glow of life” in DKU. This painting is now hanging on the wall right-hand side when entering the front door of the Academic Building in DKU. After lunch, she led me to the painting and asked me what I could see from it. The painting is quite abstract with different kinds of colorful splashes and it was hard for me to describe at first glance. However, after a short period of time of observation, I found quite a lot of “hidden” elements behind the artwork such as mountain shapes, trees, human shapes, and even some abstract Chinese characters. But I’ve never noticed these details before because I haven’t observed and gazed at this artwork for long even though I know it’s been hanging on the wall in AB for years. And this experience triggered me to think that there will be more details like this in every artwork but we just don’t pay enough attention to them. As long as we spend some time “gazing” and ruminating on something, we will discover new aspects behind what we think they used to be. There will always be many “details” undiscovered and they deserve our attention and our “gazing”.
+
+      I plan to fulfill these expectations with the help of ofxFaceTracker. This addon provides many powerful features such as face detection, face landmark detection, and pose estimation. It is dependent on OpenCV and OSC protocol. The parameters, for example, face orientation, mouth width & height, eye height & openness, jaw openness will be automatically calculated and transferred via OSC. What I need to program for this project is the algorithm that analyzes audiences’ attention on the screen, how many audiences are there, and the display of the actual “artwork”.
+
+      To be clearer and more specific about the features, I will use this function list to show them in order. It can also help me organize my thoughts when programming.
+
+      - The artwork appears only if you are gazing at it. And it appears with a gradual transition from black to normal.
+      - The artwork will turn black if you are not looking at it.
+      - The longer you gaze, the more variations will appear on the artwork.
+      - Use pose estimation to change the 3d view relative to the audience head’s position and orientation.
+      - Analyze the audience’s concentration according to audience’s expression (eye openness, still time, etc.), and give corresponding variations on the graphic.
+      - When there are more faces detected, more exaggerated the graphic will be, and more variations will appear on the screen.
+
+
+  - section_layout: text
+    content: |
+      ## Circle of Life
+      [[GitHub]](https://github.com/junkaiman/Computer-Graphics-Projects/tree/main/Midterm%20Project) [[Demo]](https://youtu.be/nLg_ymbFi1s)
+
+      ## Project Proposal
+      In the midterm project, I plan to design an interactive game that triggers the player to take in-depth thinking around the philosophy of making mistakes. 
+
+      Inspired by the film *Triangle*, I plan to use a mechanism that will be different from most 2d adventure games. After the player dies, instead of clearing everything and restart the level, in this game, the player will respawn with their previous bodies that replay their previous operations. The “current self” can see and interact with its “previous selves” just like there are multiple players playing at the same time. 
+
+      After the research, I found a mobile game *Sometimes You Die* that conveys a similar idea. In that game, the player dies with their body left on the screen. Sometimes the player has to pass the level with the help of their dead bodies. But my idea is slightly different, I intend to present the interaction between “previous selves”, “current self”, and even “future selves”. That is to say, those “previous selves” will not be static dead bodies or like recordings on the screen, but can have interactions with “current selves” (i.e. Block the way of current selves, have collisions with current selves). 
+
+  - section_layout: 2col
+    images:
+      - url: "/projects/interactive_art/circle_of_life_pic2.png"
+        caption: "Film: Triangle"
+      - url: "/projects/interactive_art/circle_of_life_pic1.png"
+        caption: "Game: Sometimes You Die"
+
+  - section_layout: text
+    content: |
+      I intend to use the “previous selves” as a metaphor for our failures because we made mistakes at a certain moment and hence died in the game. And the “current self” represents “I” at this moment. We are influenced by our previous decisions, and the previous mistakes do have a series of consequences on ourselves for now and in the future, no matter how. So the co-existence of previous and current selves manifest this “influence” across time. 
+
+      However, I don’t want to repetitively deliver the cliché that “Failure is not the opposite of success, it’s part of success”. I want to reflect the failure in a truthful and realistic way. Yes indeed, failure can be part of success. We gain experience from our failures, and we learn lessons from the failure. These lessons build up the basis of our later success. But on the other hand, most of our previous failures will become barriers on the road to success. Some small errors will accumulate to huge deviation, and some failures directly ruin everything. Or, sometimes we dwell too much in the sadness of failure and stop moving forward. 
+
+      Therefore, in the game, the “previous selves” may block the way of the “current self”, preventing the player from going forward. But sometimes they may perform as a stair for the current self to climb to a higher altitude. The player will need specific strategies to die “properly”, and take advantage of “previous failures” to complete the level.
+
+      Another question is how exactly should we deal with these failures? Should we erase the influence of bad “previous self”? Or keep those failures in memories regardless of how “painful” they were? In the game, the player is designed to have a weapon that shoots bullet to the surroundings. When the bullet touches the player’s “previous self”, the “previous life” will be terminated and the body will be erased from the screen until the next spawning. However, the player has to pay the price for exerting this ability to erase a “previous failure” because the bullet they shoot to the air might at a certain time kill the “current self” and leads to death. So, there exists a situation that your “future self” will be killed by bullets that are shoot by your previous or current self, which conveys the philosophy that “We may create a new failure when dealing with our previous failures.”
+
+---

@@ -1,0 +1,59 @@
+---
+title: "MF-Net"
+description: "Styled Multilingual Font Generator using Generative Adversarial Network (GAN)"
+date: 2022-02-14
+type: 'research'
+image: "/images/projects/mfnet/mfnet.png"
+published: true
+---
+
+intro:
+Research paper co-authored with [Yufan Zhang](https://yufanz.xyz/project/mfnet/) and [Prof. Peng Sun](https://scholars.duke.edu/person/Peng.Sun1).
+
+Accepted by [ACM MultiMedia 2022](https://2022.acmmm.org/). 
+[https://doi.org/10.1145/3503161.3548414](https://doi.org/10.1145/3503161.3548414) 
+
+Creating a complete stylized font library is time-consuming. So we propose a Generative Adversarial Networks (GAN)-based solution for few-shot font style transferring by a fast feed-forward network, MF-Net, which can transfer the font styles from a few samples to the whole multilingual font set.
+
+[[GitHub]](https://github.com/iamyufan/MF-Net) [[Demo]](https://mfont.net)
+
+
+![](/images/projects/mfnet/mfnet.png)
+
+## Paper Abstract
+Creating a complete stylized font library that helps the audience to perceive information from the text often requires years of study and proficiency in the use of many professional tools. Accordingly, automatic stylized font generation in a deep learning-based fashion is a desirable but challenging task that has attracted considerable attention in recent years. This paper revisits the state-of-the-art methods for stylized font generation and presents a taxonomy of the deep learning-based stylized font generation. Despite the notable performance of the existing models, stylized multilingual font generation, the task of applying specific font style to diverse characters in multiple languages has never been reported to be addressed. An efficient and economical method for stylized multilingual font generation is essential in numerous application scenarios that require communication with international audiences. We propose a solution for few-shot multilingual stylized font generation by a fast feed-forward network, MF-Net, which can transfer previously unseen font styles from a few samples to characters from previously unseen languages. Following the Generative Adversarial Network (GAN) framework, MF-Net adopts two separate encoders in the generator to decouple a font image's content and style information. Moreover, we adopt an attention module in the style encoder and then develop an effective loss function to improve the visual quality of the generated font images. We further demonstrate the effectiveness of the proposed MF-Net based on quantitative and subjective visual evaluation and compare it with the existing models in the scenario of stylized multilingual font generation.
+
+## Motivation
+The project is motivated by several real-world problems that 
+font and graphic designers are facing. First, designing fonts is a 
+very time-consuming task that requires years of study and 
+proficiency in the use of many professional tools. The threshold 
+for designing non-Latin fonts such as Chinese is especially 
+difficult due to the complex glyph structure and a large number 
+of characters. Second, graphic designers also face the problem 
+of font styles inconsistency in a different language. Finding a 
+multilingual font that shares the same style in different 
+languages is extremely difficult. Therefore, this project expects
+to apply deep learning methods to address the problem of 
+generating styled multilingual fonts from a small size of 
+learning samples, which can significantly lower the threshold 
+for designing multilingual fonts. 
+
+- section_layout: 1col
+images: 
+![](/images/projects/mfnet/network-structure.png)
+caption: "Network Structure of MF-Net"
+
+- section_layout: text
+content: | 
+## Results
+
+- section_layout: 1col
+images: 
+![](/images/projects/mfnet/seen_lang.png)
+caption: "Results on Seen Languages"
+
+- section_layout: 1col
+images: 
+![](/images/projects/mfnet/unseen_lang.png)
+caption: "Results on Unseen Languages"
