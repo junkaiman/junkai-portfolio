@@ -1,4 +1,3 @@
-"use client"
 import basic from "@/_contents/basic.json";
 import Image from "next/image";
 import ProjectOverviews from "./ProjectOverviews";

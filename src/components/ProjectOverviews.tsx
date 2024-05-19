@@ -1,28 +1,31 @@
-import frontMatters from "@/_contents/projects";
+import { getAllPosts } from "@/utils";
+import ProjectCard, { IProjectCard } from "./ProjectCard";
 import Link from "next/link";
 
-export default function ProjectOverviews() {
-  let products = frontMatters
-    .filter((fm) => fm.published === true)
-    .filter((fm) => fm.type === "product")
-    .sort((a, b) => (a.date > b.date ? -1 : 1));
+export default async function ProjectOverviews() {
+  let frontMatters = await getAllPosts();
+  // filter posts with metadata.published
+  frontMatters = frontMatters.filter((fm) => fm.metadata.published === "true");
+  // order frontMatter according to metadata.date
+  frontMatters = frontMatters.sort((a, b) => {
+    return (
+      new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
+    );
+  });
 
-  let research = frontMatters
-    .filter((fm) => fm.published === true)
-    .filter((fm) => fm.type === "research")
-    .sort((a, b) => (a.date > b.date ? -1 : 1));
+  let projectCardProps: IProjectCard[] = frontMatters.map((fm) => {
+    return {
+      title: fm.metadata.title,
+      description: fm.metadata.description,
+      image: fm.metadata.image,
+      url: "/projects/" + fm.slug,
+    };
+  });
 
-//   console.log(products);
   return (
-    <div>
-      {products.map((fm, i) => (
-        <div key={i}>
-          <Link href={"/projects/"+fm.filename}>
-            <h2>{fm.title}</h2>
-          </Link>
-          <p>{fm.description}</p>
-          <p>{fm.date}</p>
-        </div>
+    <div className="p-5 gap-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
+      {projectCardProps.map((props, i) => (
+        <ProjectCard key={i} props={props} />
       ))}
     </div>
   );
