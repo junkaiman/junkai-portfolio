@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import style from "./ProjectCard.module.css";
 export interface IProjectCard {
   title: string;
   description: string;
@@ -9,7 +10,7 @@ export interface IProjectCard {
 
 export default function ProjectCard({ props }: { props: IProjectCard }) {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
       <Link href={props.url}>
         <Image
           className="rounded-t-lg"
@@ -21,11 +22,11 @@ export default function ProjectCard({ props }: { props: IProjectCard }) {
       </Link>
       <div className="p-5">
         <Link href={props.url}>
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
             {props.title}
           </h5>
         </Link>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <p className="mb-3 font-normal text-gray-700">
           {props.description}
         </p>
         {/* <a
