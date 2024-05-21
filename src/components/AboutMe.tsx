@@ -1,6 +1,7 @@
 import SelfIntro from "@/_contents/about/self-intro.mdx";
 import basic from "@/_contents/basic.json";
 import Image from "next/image";
+import Link from "next/link";
 export default function AboutMe() {
   return (
     <div className="p-5 flex flex-row space-x-20">
@@ -14,7 +15,7 @@ export default function AboutMe() {
           width={900}
           height={900}
         />
-        personal pic on the right
+        <Link href={basic.resumePath} className="text-gray-100 float-end">[resume]</Link>
       </div>
     </div>
   );
