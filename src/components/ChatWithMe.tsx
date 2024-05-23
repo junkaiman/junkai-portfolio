@@ -1,4 +1,26 @@
+"use client";
+import { useEffect, useRef } from "react";
+
 export default function ChatWithMe() {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "/") {
+        if (document.activeElement !== inputRef.current) {
+          e.preventDefault();
+          inputRef.current!.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <>
       <div className="relative">
@@ -20,8 +42,9 @@ export default function ChatWithMe() {
           </svg>
         </div>
         <input
-          type="search"
-          id="search"
+          type="askme"
+          id="askme"
+          ref={inputRef}
           className="block w-9/12 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-100 focus:ring-blue-500 focus:border-white"
           placeholder="Press / to ask any question about me"
           required
