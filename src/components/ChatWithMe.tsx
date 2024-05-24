@@ -11,6 +11,11 @@ export default function ChatWithMe() {
           e.preventDefault();
           inputRef.current!.focus();
         }
+      } else if (e.key === "Enter" && document.activeElement === inputRef.current) {
+        // TODO: Query GPT 
+        console.log(inputRef.current!.value);
+        inputRef.current!.value = "";
+        inputRef.current!.blur();
       }
     };
 
@@ -45,16 +50,16 @@ export default function ChatWithMe() {
           type="askme"
           id="askme"
           ref={inputRef}
-          className="block w-9/12 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-100 focus:ring-blue-500 focus:border-white"
+          className="block w-11/12 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-100 focus:ring-blue-500 focus:border-white"
           placeholder="Press / to ask any question about me"
           required
         />
-        <button
+        {/* <button
           type="submit"
-          className="text-white absolute end-24 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+          className="text-white absolute end-14 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
         >
           Send
-        </button>
+        </button> */}
       </div>
     </>
   );

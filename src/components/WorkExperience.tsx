@@ -55,8 +55,8 @@ export default function WorkExperience() {
   }
 
   return (
-    <div className="p-8">
-      <div>Work Experience</div>
+    <div className="">
+      <div className="font-bold text-lg">Work Experience</div>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-16">
         {workExp.map((job: IJobBlock, idx: number) => (
           <JobBlock

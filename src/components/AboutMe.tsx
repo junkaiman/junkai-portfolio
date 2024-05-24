@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 export default function AboutMe() {
   return (
-    <div className="p-5 flex flex-row space-x-20">
+    <div className="p-5 flex flex-col sm:flex-row sm:space-x-20">
       <div className="text-xl space-y-4">
         <SelfIntro />
       </div>
-      <div className="ml-auto">
+      <div className="ml-auto mt-5 max-w-[20rem] ">
         <Image
           src={basic.profilePhoto}
           alt="profile photo"

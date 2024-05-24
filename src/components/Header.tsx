@@ -12,15 +12,11 @@ export default function Header() {
       <nav>
         {/* TODO: Highlight current page */}
         <ul className={style.navContainer + " flex space-x-4 text-lg"}>
-          <li>
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
+          {basic.navLinks.map((link) => (
+            <li key={link.name}>
+              <Link href={link.url}>{link.name}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
