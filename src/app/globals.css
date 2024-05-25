@@ -2,28 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-color-primary: #fffffff2;
-  --font-color-secondary: #ffffffa6;
-  --link-color-primary: #9bfd67;
-  --background-color: #222222;
-  --font-letter-spacing: 0.06rem;
-}
-
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  /* text-wrap: balance; */
-}
-
-/* @media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+
+    --font-color-primary: #fffffff2;
+    --font-color-secondary: #ffffffa6;
+    --link-color-primary: #9bfd67;
+    --background-color: #222222;
+    --font-letter-spacing: 0.06rem;
   }
-} */
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
 
 body {
   color: var(--font-color-primary);
@@ -47,7 +103,7 @@ ul {
 
 a {
   color: var(--link-color-primary);
-  text-decoration: underline 0.1em rgba(0,0,0,0);
+  text-decoration: underline 0.1em rgba(0, 0, 0, 0);
   transition: text-decoration-color 300ms;
   text-underline-offset: 0.3em;
 }
@@ -56,26 +112,77 @@ a:hover {
   text-decoration-color: var(--link-color-primary);
 }
 
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
 }
 
-
-kbd {
-  background-color: #eee;
-  border-radius: 3px;
-  border: 1px solid #b4b4b4;
-  box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.2),
-    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
-  color: #333;
-  display: inline-block;
-  font-size: 0.85em;
-  font-weight: 700;
-  line-height: 1;
-  padding: 2px 4px;
-  white-space: nowrap;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
 }
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+}
+
+h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+}
+
+h6 {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  border-left: 4px solid var(--font-color-secondary);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  background: var(--background-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  background: var(--background-color);
+  padding: 1rem;
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--font-color-secondary);
+  margin: 1rem 0;
+}
+

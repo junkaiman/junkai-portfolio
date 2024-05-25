@@ -5,12 +5,14 @@ import ProfileDetails from "@/components/ProfileDetails";
 import Timeline from "@/components/Timeline";
 export default function AboutPage() {
   return (
-    <>
+    <div className="">
       <Header />
-      <AboutMe />
-      <ProfileDetails />
-      <Timeline />
+      <div className="max-w-screen-lg m-auto">
+        <AboutMe />
+        <ProfileDetails />
+        <Timeline />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }

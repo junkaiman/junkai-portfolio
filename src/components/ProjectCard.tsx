@@ -22,9 +22,9 @@ export default function ProjectCard({ props }: { props: IProjectCard }) {
       </Link>
       <div className="p-5">
         <Link href={props.url}>
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+          <div className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
             {props.title}
-          </h5>
+          </div>
         </Link>
         <p className="mb-3 font-normal text-gray-700">
           {props.description}

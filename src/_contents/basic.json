@@ -5,6 +5,8 @@
   "profilePhoto": "/images/profilePhoto.jpg",
   "desc": "Full-Stack Indie Developer",
   "shortIntro": "Junkai Man is a Full-Stack Indie Developer focused on A.I. and Innovation.",
+  "alertOn": true,
+  "alertMessage": "🔔 I am seeking 2025 NG roles in Software Engineering in the United States",
   "startYear": 2019,
   "socials": {
     "github": "https://github.com/junkaiman",
