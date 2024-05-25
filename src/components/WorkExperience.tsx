@@ -1,4 +1,4 @@
-import profileData from "@/_contents/about/profile.json";
+import profileData from "@/_contents/about/profile";
 import Image from "next/image";
 
 interface IJobBlock {
@@ -32,7 +32,7 @@ export function JobBlock({
         <div className="text-xs text-zinc-500 tracking-widest uppercase">
           {time}
         </div>
-        <div className="text-sm text-zinc-300 mb-4">{longDesc}</div>
+        <div className="text-sm text-zinc-300 mb-4" dangerouslySetInnerHTML={{__html: longDesc}}></div>
       </div>
     </div>
   );

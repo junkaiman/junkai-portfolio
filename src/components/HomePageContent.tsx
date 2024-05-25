@@ -1,4 +1,4 @@
-import basic from "@/_contents/basic.json";
+import basic from "@/_contents/basic";
 import Image from "next/image";
 import ProjectOverviews from "./ProjectOverviews";
 import ChatWithMe from "@/components/ChatWithMe";
@@ -10,19 +10,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Hello() {
   return (
-    <div className="flex sm:flex-row gap-8 flex-col sm:h-[55vh]">
-      <div className="flex flex-col sm:basis-2/3 gap-4 mt-5">
-        <h1
-          className={
-            style.shortIntro + " text-4xl text-balance lg:text-5xl mb-10"
-          }
-        >
-          {basic.shortIntro}
+    <div className="flex sm:flex-row gap-8 flex-col mb-[3rem]">
+      <div className="flex flex-col sm:basis-2/3 gap-6 mt-5">
+        <h1 className={style.shortIntro + " text-4xl text-balance lg:text-5xl"}>
+          Hey, I'm {basic.name.split(" ")[0]}{" "}
+          <span className={style.wavingHand}>👋</span>
         </h1>
-
+        <div className="text-2xl mb-3">{basic.shortIntro}</div>
         {basic.alertOn && (
-          <Alert className="max-w-[90%] rounded-full">
-            <AlertDescription>{basic.alertMessage}</AlertDescription>
+          <Alert className="max-w-[95%] rounded-lg">
+            <AlertDescription className=""
+              dangerouslySetInnerHTML={{ __html: basic.alertMessage }}
+            ></AlertDescription>
           </Alert>
         )}
         {/* <div className="mt-3">

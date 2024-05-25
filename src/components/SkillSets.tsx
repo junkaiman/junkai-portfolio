@@ -1,5 +1,5 @@
 import Image from "next/image";
-import basic from "@/_contents/basic.json";
+import basic from "@/_contents/basic";
 
 export default function SkillSets() {
   return (

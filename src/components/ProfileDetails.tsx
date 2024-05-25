@@ -1,5 +1,5 @@
 "use client";
-import profileData from "@/_contents/about/profile.json";
+import profileData from "@/_contents/about/profile";
 import style from "./ProfileDetails.module.css";
 import Link from "next/link";
 

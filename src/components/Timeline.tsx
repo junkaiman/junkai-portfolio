@@ -1,4 +1,4 @@
-import timeline from "@/_contents/about/timeline.json";
+import timeline from "@/_contents/about/timeline";
 import style from "./Timeline.module.css";
 interface timelineData {
   year: number;
@@ -54,7 +54,7 @@ export default function Timeline() {
             <time className="mb-1 text-sm font-normal leading-none">
               {t.monthStr} {t.year}
             </time>
-            <h3 className="text-lg font-semibold">{t.title}</h3>
+            <div className="text-lg font-semibold">{t.title}</div>
             <p className="mb-1 text-base font-normal ">{t.desc}</p>
           </li>
         ))}

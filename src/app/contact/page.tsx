@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import basic from "@/_contents/basic.json";
+import basic from "@/_contents/basic";
 
 export default function ContactPage() {
   return (

@@ -1,5 +1,5 @@
 import SelfIntro from "@/_contents/about/self-intro.mdx";
-import basic from "@/_contents/basic.json";
+import basic from "@/_contents/basic";
 import Image from "next/image";
 import Link from "next/link";
 export default function AboutMe() {

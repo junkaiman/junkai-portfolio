@@ -15,7 +15,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <div>
       <Header />
       <div className="p-2 max-w-5xl mx-auto md:px-8">
+        <h1>{post.metadata.title}</h1>
         <MDXRemote source={post.content} />
+        <p>Published: {post.metadata.date}</p>
       </div>
       <Footer />
     </div>

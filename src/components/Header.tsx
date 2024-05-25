@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import basic from "@/_contents/basic.json";
+import basic from "@/_contents/basic";
 import style from "./Header.module.css";
 
 export default function Header() {
