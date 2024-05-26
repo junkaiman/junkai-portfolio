@@ -1,4 +1,4 @@
-export default [
+const arr = [
   {
     id: 0,
     title: "Experience",
@@ -37,14 +37,16 @@ export default [
         desc: "Software Engineer Intern",
         desc2: "-> BruKnow Search",
         desc2Url: "https://library.brown.edu/",
-        longDesc: "Revamped the frontend components of BruKnow Search 🔍 using Angular. Mitigated security vulnerabilities 🚨 in deprecated PHPv5 codebase and migrated to PHPv7.",
+        longDesc:
+          "Revamped the frontend components of BruKnow Search 🔍 using Angular. Mitigated security vulnerabilities 🚨 in deprecated PHPv5 codebase and migrated to PHPv7.",
       },
       {
         logo: "/images/profile/china-unicom-logo.png",
         title: "China Unicom",
         time: "June 2021 - Aug 2021",
         desc: "Software Engineer Intern",
-        longDesc: "Built data pipelines for MLsys using ⚡️ Spark. Designed experiments for recommender systems using Flask and 🐍 PyTorch. ",
+        longDesc:
+          "Built data pipelines for MLsys using ⚡️ Spark. Designed experiments for recommender systems using Flask and 🐍 PyTorch. ",
       },
     ],
   },
@@ -78,8 +80,8 @@ export default [
       "SQL, MongoDB, Redis",
       "Docker, Kubernetes, ArgoCD",
       "Hadoop, Spark, Kafka",
-      "Git, Linux, Bash, Nginx",
-      "LaTeX, Markdown, Jupyter",
+      // "Git, Linux, Bash, Nginx",
+      // "LaTeX, Markdown, Jupyter",
       "IoT, Raspberry Pi, Arduino",
     ],
   },
@@ -98,3 +100,5 @@ export default [
     ],
   },
 ];
+
+export default arr;

@@ -1,4 +1,8 @@
-export default [
+const arr = [
+  ["2024-05", "🤖 Hi, GPT-4o", "wow... Thanks to microsoft and my current job... Now I can access GPT-4o without worrying about my token usage anymore. 🤩"],
+  ["2024-04", "🧑‍💻 Back to Microsoft", "So happy that I got an opportunity to intern at Microsoft again this year. Excited to work on a project that align perfectly with my interests. "],
+  ["2024-03", "🇲🇽 Hola, Cancun", "Taking a short trip to Cancun during the spring break. 😎"],
+  ["2023-08", "🌊 Ocean State", "Just moved to Providence, RI, the Ocean State. Enjoying its calmness and beautiful scenery."],
   ["2000-10", "👶 Born in Shandong", "The year I was born."],
   [
     "2002-01",
@@ -7,6 +11,7 @@ export default [
   ],
   [
     "2012-01",
+
     "🐍 Life is Short",
     "Hello World. At the fifth grade in primary school and I was interested in Computer Programming. So I bought the book C++ Primer Plus as the tutorial. But at that time it was too difficult to understand… So I choose to learn Python.",
   ],
@@ -157,3 +162,5 @@ export default [
     "Today I graduated! Heading to 🐻 Brown University for my Master’s degree in Computer Science.",
   ],
 ];
+
+export default arr;
