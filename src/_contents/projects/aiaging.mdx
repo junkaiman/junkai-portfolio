@@ -4,32 +4,24 @@ description: "Machine-Learning-driven Biological Age Calculator"
 date: "2019-05-13"
 type: 'product'
 image: "/images/projects/aiaging/aiaging.png"
-published: true
+published: false
 ---
 
-intro: |
-  [[Link]](https://aiaging.net)
+> Intro:
+> [[Link]](https://aiaging.net)
+> 
+> Demo page for the biological age prediction project led by [Prof. Chenkai Wu and his team](http://www.chenkaiwu.com/) at Duke Kunshan University. The page receives user's inputs of physiological data and returns with a predicted biological age. Open service to individuals and healthcare organizations to monitor elderly patients' health conditions.
 
-  Demo page for the biological age prediction project led by [Prof. Chenkai Wu and his team](http://www.chenkaiwu.com/) at Duke Kunshan University. The page receives user's inputs of physiological data and returns with a predicted biological age. Open service to individuals and healthcare organizations to monitor elderly patients' health conditions.
-content_layout:
-  - section_layout: 5col-7col
-    images:
-      - url: "/projects/aiaging/aiaging.png"
-      - url: "/projects/aiaging/aiaging.jpeg"
-  - section_layout: text
-    content: |
+{/* ![](/images/projects/aiaging/aiaging.png) */}
+![](/images/projects/aiaging/aiaging.jpeg)
     
-      The project is held under Global Health Research Center and funded by local government.
+The project is held under Global Health Research Center and funded by local government.
 
-      I took the responsibility of server deployment, frontend page design, and the backend system development to connect pre-trained PyCaret model with user's input. Backend system is written in Django, and vue.js is used to build the front-end webpage. Then the project with its all dependencies are packed into a docker image.
+I took the responsibility of server deployment, frontend page design, and the backend system development to connect pre-trained PyCaret model with user's input. Backend system is written in Django, and vue.js is used to build the front-end webpage. Then the project with its all dependencies are packed into a docker image.
 
-  - section_layout: text
-    content: |
-      ## Technical Architecture
-      Vue.js as front-end, and Django as backend. Using uWSGI to improve the maximum concurrent capacity. And Docker is used to containerize the App for faster deployment.
+## Technical Architecture
+Vue.js as front-end, and Django as backend. Using uWSGI to improve the maximum concurrent capacity. And Docker is used to containerize the App for faster deployment.
 
-  - section_layout: 1col
-    images:
-      - url: "/projects/aiaging/architect.png"
+![](/images/projects/aiaging/architect.png)
 
 ---
