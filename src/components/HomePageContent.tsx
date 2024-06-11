@@ -13,7 +13,7 @@ function Hello() {
     <div className="flex sm:flex-row gap-8 flex-col mb-[3rem]">
       <div className="flex flex-col sm:basis-2/3 gap-6 mt-5">
         <h1 className={style.shortIntro + " text-4xl text-balance lg:text-5xl"}>
-          Hey, I'm {basic.name.split(" ")[0]}{" "}
+          {"Hey, I'm "} {basic.name.split(" ")[0]}{" "}
           <span className={style.wavingHand}>👋</span>
         </h1>
         <div className="text-2xl mb-3">{basic.shortIntro}</div>
