@@ -1,1 +1,1 @@
-src/_contents/* linguist-vendored
+*.mdx linguist-detectable=false
