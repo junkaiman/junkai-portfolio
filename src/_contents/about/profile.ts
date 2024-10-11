@@ -8,7 +8,7 @@ const arr = [
         logo: "/images/profile/microsoft-logo-512.png",
         title: "Microsoft",
         startTime: 2024,
-        time: "April 2024 - Present",
+        time: "April 2024 - Aug 2024",
         desc: "Software Engineer Intern",
         desc2: "-> Forms Copilot",
         desc2Url:
