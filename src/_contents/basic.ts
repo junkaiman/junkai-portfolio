@@ -4,7 +4,7 @@ export default {
   resumePath: "/resume.pdf",
   profilePhoto: "/images/profilePhoto.jpg",
   desc: "Full-Stack Indie Developer",
-  shortIntro: `I'm an innovative fullstack developer crafting next-generation AI-powered applications.`,
+  shortIntro: `I'm a creative fullstack developer building cutting-edge AI-powered applications for the future.`,
   alertOn: true,
   alertMessage: `👉 Actively seeking 2025 New Grad roles in Software Engineering within the United States. <a class="text-blue-800" href="https://linkedin.com/in/junkaiman" target="_blank">[LinkedIn]</a>`,
   startYear: 2019,
