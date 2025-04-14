@@ -42,7 +42,7 @@ function Hello() {
 
 export default function HomePageContent() {
   return (
-    <div className="p-4 space-y-12 xl:px-[8rem] max-w-screen-lg m-auto">
+    <div className="p-4 space-y-12 xl:px-[8rem] max-w-(--breakpoint-lg) m-auto">
       <Hello />
       <SkillSets />
       <WorkExperience />
