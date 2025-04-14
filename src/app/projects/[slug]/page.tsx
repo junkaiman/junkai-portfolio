@@ -25,3 +25,10 @@ export default async function Page(props: {
     </div>
   );
 }
+
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
