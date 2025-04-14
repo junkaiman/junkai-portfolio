@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prod:build": "next build && rsync -av --remove-source-files out/ /var/www/portfolio/"
+    "prod:build": "next build && rm -rf /var/www/portfolio/* && rsync -av --remove-source-files out/ /var/www/portfolio/"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
