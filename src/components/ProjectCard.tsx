@@ -10,7 +10,7 @@ export interface IProjectCard {
 
 export default function ProjectCard({ props }: { props: IProjectCard }) {
   return (
-    <div className="max-w-sm bg-white rounded-lg shadow">
+    <div className="max-w-sm bg-white rounded-lg shadow-sm">
       <Link href={props.url}>
         <Image
           className="rounded-t-lg"

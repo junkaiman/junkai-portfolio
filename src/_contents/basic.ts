@@ -6,7 +6,7 @@ export default {
   desc: "Full-Stack Indie Developer",
   shortIntro: `I'm a creative fullstack developer building cutting-edge AI-powered applications for the future.`,
   alertOn: true,
-  alertMessage: `👉 Actively seeking 2025 New Grad roles in Software Engineering within the United States. <a class="text-blue-800" href="https://linkedin.com/in/junkaiman" target="_blank">[LinkedIn]</a>`,
+  alertMessage: `👉 Actively seeking 2025 New Grad roles in Software Engineering within the United States.`,
   startYear: 2019,
   socials: {
     github: "https://github.com/junkaiman",

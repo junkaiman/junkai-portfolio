@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <div className="">
       <Header />
-      <div className="max-w-screen-lg m-auto">
+      <div className="max-w-(--breakpoint-lg) m-auto">
         <AboutMe />
         <ProfileDetails />
         <Timeline />
