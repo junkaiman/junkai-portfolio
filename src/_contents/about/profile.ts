@@ -40,14 +40,6 @@ const arr = [
         longDesc:
           "Revamped the frontend components of BruKnow Search 🔍 using Angular. Mitigated security vulnerabilities 🚨 in deprecated PHPv5 codebase and migrated to PHPv7.",
       },
-      {
-        logo: "/images/profile/china-unicom-logo.png",
-        title: "China Unicom",
-        time: "June 2021 - Aug 2021",
-        desc: "Software Engineer Intern",
-        longDesc:
-          "Built data pipelines for MLsys using ⚡️ Spark. Designed experiments for recommender systems using Flask and 🐍 PyTorch. ",
-      },
     ],
   },
   {
