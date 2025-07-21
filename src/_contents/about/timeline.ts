@@ -1,5 +1,6 @@
 const arr = [
-  ["2024-08", "💼 Job Hunting", "ikr..."],
+  ["2025-07", "☀️ Moving to LA", "Starting my first full-time job as a Noogler in Los Angeles, CA"],
+  ["2024-08", "💼 Job Hunting", "Leetcode + System Design + Mock interviews... ikr..."],
   ["2024-07", "🏋️ Bulking Up", "Starting to hit the gym on a daily basis since this summer. And... Protein Protein Protein Protein 🥩"],
   ["2024-05", "🤖 Hi, GPT-4o", "Wow... Thanks to Microsoft and my current job... Now I can access the GPT-4o without worrying about my token usage anymore. 🤩"],
   ["2024-04", "🧑‍💻 Back to Microsoft", "So happy that I got an opportunity to intern at Microsoft again this year. Excited to work on a project that align perfectly with my interests. "],
