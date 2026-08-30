@@ -14,7 +14,7 @@ const arr = [
         desc2Url:
           "https://developers.google.com/meridian",
         longDesc:
-          `Working on google/meridian project`
+          `Working on Ads measurement / Agentic projects`
       },
       {
         logo: "/images/profile/microsoft-logo-512.png",
