@@ -1,0 +1,44 @@
+---
+title: "Isaac Companion"
+description: "Offline encyclopedia for The Binding of Isaac — 900+ items, screenshot recognition."
+date: 2026-09-10
+type: 'product'
+image: "/images/projects/isaaccompanion/album.png"
+published: true
+---
+
+> An offline encyclopedia for The Binding of Isaac — 900+ items, trinkets and bosses in your pocket, with on-device screenshot recognition.
+
+iOS 18+ · SwiftUI · Core ML · Free, no ads
+
+[TestFlight](https://testflight.apple.com/join/kpYkDhjy) [GitHub](https://github.com/junkaiman/IsaacCompanion)
+
+<div className="not-prose grid grid-cols-2 md:grid-cols-3 gap-3 my-6">
+<img src="/images/projects/isaaccompanion/home.png" alt="Item grid" className="rounded-xl border border-white/10" />
+<img src="/images/projects/isaaccompanion/detail.png" alt="Item detail" className="rounded-xl border border-white/10" />
+<img src="/images/projects/isaaccompanion/settings.png" alt="Settings" className="rounded-xl border border-white/10" />
+<img src="/images/projects/isaaccompanion/quiz.png" alt="Item quiz" className="rounded-xl border border-white/10" />
+<img src="/images/projects/isaaccompanion/lucky.png" alt="I'm Feeling Lucky dice" className="rounded-xl border border-white/10" />
+</div>
+
+### Why I Built It
+Every Isaac run ends the same way: pause, pull out my phone, google the item I just picked up, scroll past a wall of text to find the one line I needed — then come back and forget what I was doing. The wiki is great, but it's built for browsers, not for the 30 seconds between item pickups.
+
+### What It Does
+- **Complete offline data** — 900+ items, 189 trinkets and 99 bosses with structured effects, unlock conditions and DLC filters, all bundled. Zero network needed.
+- **Screenshot recognition** — point the camera at your game screen and an on-device Core ML model (MobileNetV3, 711 classes, trained on item icons) tells you what you just picked up.
+- **Fuzzy search** — type 'momsb' and find Mom's Box.
+- **Built-in translation** — item effects translated on-device via Apple Intelligence (English / 简体中文 / 繁體中文).
+- **Item quiz** — a 10-round guessing game to learn the item pool between runs.
+- **I'm Feeling Lucky** — roll a D6 to jump to a random item, trinket or boss.
+
+### How We Built It
+The data pipeline scrapes the community [Rebirth wiki (wiki.gg)](https://bindingofisaacrebirth.wiki.gg) and cleans years of MediaWiki template markup into structured JSON — preserving bullet lists, phase sections and per-DLC values. A Core ML model trained on 700+ item icons powers the screenshot recognition, running entirely on-device. The app itself is native SwiftUI with light/dark mode, multiple app icons and full offline support.
+
+### Challenges
+Turning messy MediaWiki templates into structured JSON without destroying bullet and phase formatting took several iterations. The item classifier's second retrain regressed on real-world screenshots — I shipped v1 and kept the backup instead of chasing a worse model.
+
+### What's Next
+- App Store release after TestFlight beta feedback
+- Android version
+- Recognition model improvements with real-world screenshot validation
